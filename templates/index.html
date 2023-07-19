@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Customer Churn Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Bank Customer Churn Prediction</h1>
+    <form action="/predict" method="POST">
+
+        <div>
+            <label for="clientnum">CLIENTNUM</label>
+            <input type="number" id="clientnum" name="clientnum" step="any" required>
+        </div>
+
+        <div>
+            <label for="customer_age">Customer Age</label>
+            <input type="number" id="customer_age" name="customer_age" required>
+        </div>
+
+        <div>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="dependent_count">Dependent Count</label>
+            <input type="number" id="dependent_count" name="dependent_count" step="any" required>
+        </div>
+
+        <div>
+            <label for="education_level">Education Level</label>
+            <select id="education_level" name="education_level" required>
+                <option value="" disabled selected>Select</option>
+                <option value="highschool">High School</option>
+                <option value="graduate">Graduate</option>
+                <option value="uneducated">Uneducated</option>
+                <option value="college">College</option>
+                <option value="postgraduate">Post-Graduate</option>
+                <option value="doctorate">Doctorate</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="marital_status">Marital Status</label>
+            <select id="marital_status" name="marital_status" required>
+                <option value="" disabled selected>Select</option>
+                <option value="married">Married</option>
+                <option value="single">Single</option>
+                <option value="divorced">Divorced</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="income_category">Income Category</label>
+            <select id="income_cavg_open_to_buyategory" name="income_category" required>
+                <option value="" disabled selected>Select</option>
+                <option value="less_then_$40k">Less than $40K</option>
+                <option value="$40k-$60k">$40K-$60K</option>
+                <option value="$40k-$60k">$60K-$80K</option>
+                <option value="$80k-$120k">$80K-$120K</option>
+                <option value="$120k+">$120K+</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="card_category">Card Category</label>
+            <select id="card_category" name="card_category" required>
+                <option value="" disabled selected>Select</option>
+                <option value="blue">Blue</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+                <option value="platinum">Platinum</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="months_on_book">Month On Book</label>
+            <input type="number" id="months_on_book" name="months_on_book" step="any" required>
+        </div>
+
+        <div>
+            <label for="total_relationship_count">Total Relationship Count</label>
+            <input type="number" id="total_relationship_count" name="total_relationship_count">
+        </div>
+
+        <div>
+            <label for="months_inactive_12_mon">Months Inactive 12 mon</label>
+            <input type="number" id="months_inactive_12_mon" name="months_inactive_12_mon" step="any" required>
+        </div>
+
+        <div>
+            <label for="contacts_count_12_mon">Contacts Count 12 mon</label>
+            <input type="number" id="contacts_count_12_mon" name="contacts_count_12_mon" step = "any" required>
+        </div>
+
+        <div>
+            <label for="credit_limit">Credit Limit</label>
+            <input type="number" id="credit_limit" name="credit_limit" step="any" required>
+        </div>
+
+        <div>
+            <label for="total_revolving_bal">Total Revolving Balance</label>
+            <input type="number" id="total_revolving_bal" name="total_revolving_bal" step="any" required>
+        </div>
+
+        <div>
+            <label for="avg_open_to_buy">Avg Open to Buy</label>
+            <input type="number" id="avg_open_to_buy" name="avg_open_to_buy" step="any" required>
+        </div>
+
+        <div>
+            <label for="total_amt_chng_q4_q1">Total Amount Change Q4-Q1</label>
+            <input type="number" id="total_amt_chng_q4_q1" name="total_amt_chng_q4_q1" step="any" required>
+        </div>
+
+        <div>
+            <label for="total_trans_amt">Total Transaction Amount</label>
+            <input type="number" id="total_trans_amt" name="total_trans_amt" step="any" required>
+        </div>
+
+        <div>
+            <label for="total_trans_ct">Total Transaction CT</label>
+            <input type="number" id="total_trans_ct" name="total_trans_ct" step="any" required>
+        </div>
+
+        <div>
+            <label for="total_ct_chng_q4_q1">Total CT Change Q4-Q1</label>
+            <input type="number" id="total_ct_chng_q4_q1" name="total_ct_chng_q4_q1" step="any" required>
+        </div>
+
+        <div>
+            <label for="avg_utilization_ratio">Avg Utilization Ratio</label>
+            <input type="number" id="avg_utilization_ratio" name="avg_utilization_ratio" step="any" required>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
